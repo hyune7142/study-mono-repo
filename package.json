@@ -1,0 +1,29 @@
+{
+  "name": "mono-repo",
+  "version": "1.0.0",
+  "description": "mono-repo study",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "pnpm dlx only-allow pnpm",
+    "common": "pnpm -F @mono-repo/common",
+    "web": "pnpm -F @mono-repo/web",
+    "all": "pnpm -r dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">16.18.0",
+    "pnpm": ">=8.15.1"
+  },
+  "packageManager": "pnpm@8.15.1",
+  "devDependencies": {
+    "pnpm": "^8.15.1"
+  },
+  "dependencies": {
+    "styled-components": "^6.1.8"
+  }
+}
